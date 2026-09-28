@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Feedback Portal</h1>
+        <p class="subtitle">Share your experience with us</p>
+
+        <form id="feedbackForm">
+
+            <label for="name">Student Name</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label for="email">Email ID</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="yourname@niet.co.in"
+                required
+            >
+            <small>Only @niet.co.in email addresses are accepted.</small>
+
+            <label for="branch">Branch</label>
+            <select id="branch" required>
+                <option value="">Select your branch</option>
+                <option value="CSE">CSE</option>
+                <option value="CSE - Data Science">CSE - Data Science</option>
+                <option value="CSE - AI & ML">CSE - AI & ML</option>
+                <option value="IT">IT</option>
+                <option value="ECE">ECE</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="section">Section</label>
+            <select id="section" required>
+                <option value="">Select your section</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+            </select>
+
+            <label for="feedback">Feedback</label>
+            <textarea
+                id="feedback"
+                placeholder="Write your feedback..."
+                rows="4"
+                required
+            ></textarea>
+
+            <p id="errorMessage" class="error" role="alert"></p>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <h2>Submitted Feedback</h2>
+
+        <div id="feedbackList">
+            <p class="empty">No feedback submitted yet.</p>
+        </div>
+    </div>
+
+    <script src="email-validator.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
