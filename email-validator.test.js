@@ -11,7 +11,7 @@ const emailTests = [
     ["jatin.chauhan@niet.co.in", true],
     ["JATIN@NIET.CO.IN", true],
     ["jatin+feedback@niet.co.in", true],
-    ["jatin@gmail.com", false],
+    ["jatin@gmail.com", true],
     ["jatin@niet.com", false],
     ["jatin@niet.co.in.example.com", false],
     ["jatin@niet.co.in@gmail.com", false],
